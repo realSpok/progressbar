@@ -5,7 +5,7 @@ This implements a couple features that I have not seens anywhere else (wich is w
 * It displays 2 decimal places for the percentage of completion, which is handy for longer scripts
 
 # how to use 
-add progress to your PATH
+Add "progress" to your PATH.
 in your script, pass the following 
 ```bash
 progress $k $total
@@ -33,11 +33,11 @@ done
 ## Output
 
 ```bash
-(ins)spok:Work/progressbar$ ./test.sh                                                                                                                 Progress : [###-------] 36.00%
+(ins)spok:Work/progressbar$ ./test.sh                                Progress : [###-------] 36.00%
 ```
 
 # Sources 
 
-* tldp.org/HOWTO/Bash-Prompt-HOWTO/clockt.html
+* http://tldp.org/HOWTO/Bash-Prompt-HOWTO/clockt.html
 * https://github.com/fearside/ProgressBar/
 
