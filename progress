@@ -1,0 +1,19 @@
+#!/bin/bash
+let prompt_x=$(tput cols)-30
+let _progress=(${1}*100/${2}*100)/100
+pr=$(bc <<< "scale = 2; 100*${1}/${2}")
+let _done=(${_progress})/10
+let _left=10-$_done
+_fill=$(printf "%${_done}s")
+_empty=$(printf "%${_left}s")
+
+tput cuu1
+tput sc
+tput cup 0 ${prompt_x}
+tput setaf 4 ; tput bold
+tput setaf 1
+echo -n "Progress : [${_fill// /#}${_empty// /-}] ${pr}%"
+#printf "%0.2f\n" ${_progress}
+tput setaf 4 ; tput bold
+tput rc
+
